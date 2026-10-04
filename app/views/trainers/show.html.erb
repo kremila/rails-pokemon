@@ -1,0 +1,10 @@
+<h1> trainers </h1>
+
+<%= @trainer.name %>
+<%= @trainer.age %>
+<%= cl_image_tag @trainer.photo.key %>
+<% @trainer.pokemons.each do |pokemon| %>
+<%= pokemon.name%>
+<%= pokemon.element_type %>
+<%= image_tag pokemon.photo %>
+<% end %>

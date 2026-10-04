@@ -1,0 +1,11 @@
+<h1> pokemons </h1>
+
+<%= @pokemon.name %>
+<%= @pokemon.element_type %>
+<%= cl_image_tag @pokemon.photo.key %>
+<%= simple_form_for [@pokemon, @pokeball] do |f|%>
+<%= f.input :location %>
+<%= f.input :caught_on %>
+<%= f.input :trainer_id, collection: Trainer.all %>
+<%= f.submit %>
+<% end %>

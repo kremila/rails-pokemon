@@ -1,0 +1,7 @@
+<h1> trainers </h1>
+
+<% @trainers.each do |trainer|%>
+<%= trainer.name %>
+<%= trainer.age %>
+<%= image_tag trainer.photo %>
+<% end %>
